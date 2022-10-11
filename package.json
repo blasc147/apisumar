@@ -8,7 +8,7 @@
     "npm": "*"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "node src/index.js",
     "start:dev": "nodemon --exec babel-node src/index.js",
     "start:prod": "yarn build && node build/index.js",
     "build": "babel src -d build"
@@ -21,12 +21,13 @@
     "babel": "^6.23.0",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.16.4",
     "express-jwt": "^5.3.1",
     "jsonwebtoken": "^8.5.0",
     "mssql": "^4.3.0",
+    "nodemon": "^2.0.4",
     "passport": "^0.4.0",
-    "passport-local": "^1.0.0",
-    "nodemon": "^2.0.4"
+    "passport-local": "^1.0.0"
   }
 }

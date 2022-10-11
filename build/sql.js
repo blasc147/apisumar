@@ -2,12 +2,12 @@ const sql = require('mssql');
 
 /* SQL CONFIG */
 const sql_config = {
-  user: 'sa',
-  password: 'Pily140531',
+  user: process.env.DATABASE_USER,
+  password: process.env.DATABASE_PASSWORD,
   server: '10.2.2.124' + '\\' + 'SUMAR',
   driver: "msnodesqlv8",
   port: '1433',
-  database: 'FacturacionW'
+  database: process.env.DATABASE_NAME
 };
 sql.on('error', err => {
   console.log('SQL ERROR:');
